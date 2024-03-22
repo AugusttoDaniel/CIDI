@@ -22,3 +22,6 @@ document.querySelectorAll('.accordion-button').forEach(button => {
       }
     });
   });
+  document.querySelector('.btn-agende').addEventListener('click', function() {
+    window.location.href = 'agenda.html';
+});

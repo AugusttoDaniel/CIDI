@@ -59,10 +59,15 @@ nav ul li a:hover {
   color: var(--text-secundary-color);
 }
 
-.main-content .image-container {  
-  background: url("../imgs/banner_home.png") no-repeat center center / contain;
+.main-content {
+  margin: 0;
+  padding: 0;
+}
+
+.main-content .image-container {
+  background: url("../imgs/banner_home.png") no-repeat center center / cover;
   width: 100vw;
-  height: 85vh;
+  height: 90vh;
 }
 
 .maquina {
@@ -97,7 +102,7 @@ figure img {
 .texto p {
   color: var(--text-color);
   font-size: 1em;
-  /* padding: 0 30% 0 0; */
+
 }
 
 .button {
@@ -161,7 +166,7 @@ figure img {
 }
 
 .motivo-escolha li:nth-child(1)::before {
-  
+
   background-image: url("/assets/imgs/icon1.png");
 }
 
@@ -278,9 +283,7 @@ figure img {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* Centraliza os itens se não ocuparem 100% da largura */
   gap: 20px;
-  /* Espaço opcional entre os elementos */
 }
 
 .image-duvidas,
@@ -329,7 +332,6 @@ figure img {
 
 .duvidas-itens li a:before {
   content: "\002B";
-  /* Símbolo de adição */
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -362,9 +364,7 @@ footer {
   background-color: #fff;
   border-bottom: 3px solid #E1E1E1;
   margin-left: auto;
-  /* Centraliza à esquerda */
   margin-right: auto;
-  /* Centraliza à direita */
   margin-bottom: 100px;
 }
 
@@ -374,7 +374,6 @@ footer {
   align-items: center;
   padding: 1rem;
   max-width: 1100px;
-  /* Ou a largura máxima desejada */
   margin: 0 auto;
 }
 
@@ -385,21 +384,15 @@ footer {
 .footer-nav a {
   text-decoration: none;
   color: #000;
-  /* Cor do texto */
   margin: 0 10px;
-  /* Espaçamento entre os links */
   font-size: 24px;
-  /* Tamanho do texto */
 }
 
 .footer-social a {
   text-decoration: none;
   color: #000;
-  /* Cor do texto */
   margin: 0 10px;
-  /* Espaçamento entre os links */
   font-size: 16px;
-  /* Tamanho do texto */
 }
 
 i.fab {

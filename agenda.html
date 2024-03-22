@@ -3,17 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Centro Integrado Diagnóstico por Imagem, CID São Carlos, exames de imagem, laboratório médico São Carlos, diagnóstico por imagem São Carlos, saúde São Carlos, radiologia São Carlos, ultrassonografia, tomografia, ressonância magnética, Santa Casa São Carlos, hospital São Carlos, atendimento médico, exames médicos São Carlos, laboratório análises clínicas" name="keywords" />
+    <meta content="Centro Integrado Diagnóstico por Imagem, CID São Carlos, exames de imagem, laboratório médico São Carlos, diagnóstico por imagem São Carlos, saúde São Carlos, radiologia São Carlos, ultrassonografia, tomografia, ressonância magnética, Santa Casa São Carlos, hospital São Carlos, atendimento médico, exames médicos São Carlos, laboratório análises clínicas, CIDI, CIDISaoCarlos, São Carlos" name="keywords" />
     <meta
       name="description"
       content="Centro de Imagens Médicas - Raio-X Simples - Raio-X Contrastado - Tomografia Helicoidal - Tomografia Helicoidal Cardíaca - Ressonância Magnética - Ultrasom geral e Doopler - Densitometria óssea - Mamografia."
     />
     <title>Centro Integrado Diagnóstico Por Imagem em [São Carlos - SP]</title>
-    <link href="../assets/css/contato.css" rel="stylesheet" />
+    <link href="/assets/css/agenda.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <script type="application/ld+json">
         {
           "@context": "http://schema.org",
@@ -50,10 +52,11 @@
       <img class="logo" src="assets/imgs/logo2.png" alt="Logotipo" />
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#sobre">Sobre nós</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="index.html" target="#home">Home</a>
+          </li>
+          <li><a href="index.html" target="#sobre">Sobre nós</a></li>
+          <li><a href="index.html" target="#servicos">Serviços</a></li>
+          <li><a href="contato.html" target="_blank">Contato</a></li>
           <li><a class="Agenda" href="#contato">Agenda</a></li>
         </ul>
       </nav>
@@ -63,64 +66,40 @@
       <p id="currentRoute">Home</p>
     </section>
     <main>
-      <div class="container">
-        <div class="primeira-form-container">
-          <div class="info">
-            <div class="contact-info">
-              <div class="phone">
-                <p>Telefone</p>
-                <p>16 3364-2609</p>
-                <p>16 3509-1155</p>
-                <p>16 3371-4042</p>
+      <div class="formulario-container">
+        <form id="formAgendamento">
+          <!-- Linha 1 para Nome e E-mail -->
+          <div class="linha">
+              <div class="campo">
+                  <input type="text" id="nome" placeholder="Nome" required>
               </div>
-              <div class="hours">
-                <p>Horário de funcionamento</p>
-                <p>Segunda a Sexta-feira - 7 às 19 horas.</p>
-                <p>Sábado - 7 às 12 horas.</p>
+              <div class="campo">
+                  <input type="email" id="email" placeholder="E-mail" required>
               </div>
-            </div>
-            <div class="additional-info">
-              <div class="address">
-                <p>Endereço</p>
-                <p>R. Maestro João Seppe s/h</p>
-                <p>Jardim Paraíso - São Carlos SP</p>
-              </div>
-              <div class="social-media">
-                <a href="link-to-facebook">
-                  <i class="fab fa-facebook"></i>
-                </a>
-                <a href="link-to-instagram">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </div>
-            </div>
           </div>
-        </div>
-        <div class="form-container">
-          <div class="contact-form">
-            <h2>Tire suas dúvidas aqui!</h2>
-            <form action="#">
-              <input type="text" placeholder="Seu nome" required />
-              <input type="email" placeholder="Seu e-mail" required />
-              <textarea placeholder="Sua mensagem" required></textarea>
-              <button type="submit">Enviar</button>
-            </form>
+          <!-- Linha 2 para Telefone e Serviços -->
+          <div class="linha">
+              <div class="campo">
+                  <input type="tel" id="telefone" placeholder="Telefone" required>
+              </div>
+              <div class="campo">
+                  <select id="servicos" required>
+                      <option value="">Serviços</option>
+                      <option value="ultrassonografias">ULTRASSONOGRAFIAS</option>
+                      <option value="raiox">RAIO X</option>
+                      <option value="tomografias">TOMOGRAFIAS</option>
+                      <option value="ressonancias">RESSONÂNCIAS MAGNÉTICAS</option>
+                      <option value="densitometria">DENSITOMETRIA ÓSSEA</option>
+                      <option value="mamografia">MAMOGRAFIA</option>
+                  </select>
+              </div>
           </div>
-        </div>
-
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0513830211147!2d-47.88522668447727!3d-23.97934438447014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c631d3486d5a2f%3A0xf4f5b8bb14a043e5!2sR.%20Maestro%20João%20Seppe%2C%20São%20Carlos%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1644509191445!5m2!1spt-BR!2sbr"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            sandbox="allow-same-origin allow-scripts"
-            disableDefaultUI="true"
-            gestureHandling="none"
-          >
-          </iframe>
-        </div>
-      </div>
+          <div class="campo">
+              <button type="submit" id="agendar"><i class="fab fa-whatsapp"></i>Agendar</button>
+          </div>
+      </form>
+      
+    </div>
     </main>
     <footer>
       <div class="footer-container">
@@ -131,18 +110,19 @@
           <a href="#home">Home</a>
           <a href="#sobre">Sobre nós</a>
           <a href="#servicos">Serviços</a>
-          <a href="#contato">Contato</a>
+          <a href="contato.html" target="_blank">Contato</a>
+          <a href="agenda.html" target="_blank">Agenda</a>
         </div>
         <div class="footer-social">
           <a href="link-to-facebook">
-            <i class="fab1 fa-facebook"></i>
+            <i class="fab fa-facebook"></i>
           </a>
           <a href="link-to-instagram">
-            <i class="fab1 fa-instagram"></i>
+            <i class="fab fa-instagram"></i>
           </a>
         </div>
       </div>
     </footer>
   </body>
-  <script src="assets/js/contato.js"></script>
+  <script src="assets/js/agenda.js"></script>
 </html>
