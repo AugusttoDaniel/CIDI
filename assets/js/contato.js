@@ -32,3 +32,33 @@ if (pathElement && routeElement) {
 
 window.addEventListener('hashchange', updatePathAndRoute);
 window.addEventListener('DOMContentLoaded', updatePathAndRoute);
+
+function toggleMenu() {
+    console.log('toggleMenu');
+    var nav = document.querySelector('nav');
+    nav.classList.toggle('show');
+    
+    // Imediatamente após alternar, verifique se precisa adicionar ou remover o ouvinte
+    // que fecha o menu ao clicar fora
+    if (nav.classList.contains('show')) {
+        // Adiciona um ouvinte de clique ao documento para fechar o menu
+        document.addEventListener('click', closeMenuOnClickOutside);
+    } else {
+        // Remove o ouvinte se o menu for fechado pelo botão hambúrguer novamente
+        document.removeEventListener('click', closeMenuOnClickOutside);
+    }
+    
+    // Impede que o evento de clique se propague e acione o ouvinte no document imediatamente
+    event.stopPropagation();
+  }
+  
+  // Função para fechar o menu ao clicar fora dele
+  function closeMenuOnClickOutside(event) {
+    var nav = document.querySelector('nav');
+    if (!nav.contains(event.target)) {
+        nav.classList.remove('show');
+        // Remove o ouvinte após o uso para evitar chamadas desnecessárias
+        document.removeEventListener('click', closeMenuOnClickOutside);
+    }
+  }
+  

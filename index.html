@@ -46,9 +46,12 @@
       </script>
   </head>
   <body>
-    <header class="header">
-      <img class="logo" src="assets/imgs/logo2.png" alt="Logotipo" />
-      <nav>
+    <header>
+       <img class="logo" src="assets/imgs/logo2.png" alt="Logotipo" />
+       <a id="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+        ☰
+      </a>
+       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#sobre">Sobre nós</a></li>
@@ -58,10 +61,10 @@
           <li><a href="agenda.html" target="_blank">Agenda</a>
           </li>
         </ul>
-      </nav>
+      </nav> 
     </header>
 
-    <section id="home" class="main-content">
+     <section id="home" class="main-content">
       <div class="image-container">
 
       </div>
@@ -72,7 +75,6 @@
           src="assets/imgs/machine.png"
           alt="Imagem de uma máquina de ressonância magnética"
         />
-        <!-- <figcaption>Imagem ilustrativa de uma máquina de ressonância magnética</figcaption> -->
       </figure>
       <div class="texto">
         <h1>Conheça o CIDI</h1>
@@ -83,41 +85,42 @@
         </p>
         <button class="button" onclick="">Saiba mais</button>
       </div>
+      <div class="container-escolha">
+        <div class="text-section">
+          <h2>Por que nos escolher?</h2>
+          <ul class="motivo-escolha">
+            <li>
+              <h4>Segurança e suporte hospitalar.</h4>
+              <p>
+                Estamos dentro do hospital isso
+                garante atendimento rápido e apoio especializado em caso de
+                urgência
+              </p>
+            </li>
+            <li>
+              <h4>Médicos certificados. </h4>
+              <p>
+                Todos os médicos possuem títulos do Colégio
+                Brasileiro de Radiologia e certificados junto ao MEC.
+              </p>
+            </li>
+            <li>
+              <h4>Tecnologia e precisão. </h4>
+              <p>
+                Resultados mais rápidos por contarem com
+                equipamentos de última geração.
+              </p>
+            </li>
+          </ul>
+  
+          <a  href="agenda.html" target="_blank" class="btn-agende">Agende</a>
+        </div>
+        <div class="image-section">
+          <img src="assets/imgs//office.png" alt="Descrição da imagem" />
+        </div>
+      </div>
     </section>
-    <div class="container-escolha">
-      <div class="text-section">
-        <h2>Por que nos escolher?</h2>
-        <ul class="motivo-escolha">
-          <li>
-            <h4>Segurança e suporte hospitalar.</h4>
-            <p>
-              Estamos dentro do hospital isso
-              garante atendimento rápido e apoio especializado em caso de
-              urgência
-            </p>
-          </li>
-          <li>
-            <h4>Médicos certificados. </h4>
-            <p>
-              Todos os médicos possuem títulos do Colégio
-              Brasileiro de Radiologia e certificados junto ao MEC.
-            </p>
-          </li>
-          <li>
-            <h4>Tecnologia e precisão. </h4>
-            <p>
-              Resultados mais rápidos por contarem com
-              equipamentos de última geração.
-            </p>
-          </li>
-        </ul>
 
-        <a  href="agenda.html" target="_blank" class="btn-agende">Agende</a>
-      </div>
-      <div class="image-section">
-        <img src="assets/imgs//office.png" alt="Descrição da imagem" />
-      </div>
-    </div>
     <section id="servicos" class="drop">
       <div class="services-menu">
         <h1>Nossos Serviços</h1>
@@ -229,6 +232,7 @@
         <a  href="agenda.html" target="_blank" class="btn-agende">Agende</a>
       </div>
     </section>
+    
     <section id="">
       <div class="container-duvidas">
         <div class="image-duvidas">
@@ -315,7 +319,8 @@
           </a>
         </div>
       </div>
-    </footer>
+    </footer> 
+    <script src="assets/js/index.js"></script>
   </body>
-  <script src="assets/js/contato.js"></script>
+  
 </html>
